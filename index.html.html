@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENDOME...QUEEÈ? - Projecte Endometriosi</title>
+    
+    <!--
+    ═══════════════════════════════════════════════════════════════════════════
+    📝 INSTRUCCIONS PER EDITAR AQUESTA PÀGINA:
+    ═══════════════════════════════════════════════════════════════════════════
+    
+    1. OBRIR: Fes clic dret al fitxer → "Obrir amb" → Bloc de notes / TextEdit
+    
+    2. BUSCAR: Prem Ctrl+F (Windows) o Cmd+F (Mac) per buscar el text que vols canviar
+    
+    3. EDITAR TEXTOS: Busca el text que vols canviar i modifica'l directament
+       Exemple: Si vols canviar "Institut Escola Mirades", busca'l i canvia'l
+    
+    4. AFEGIR FOTOS: Busca "📸 AFEGIR FOTO AQUÍ" i segueix les instruccions
+       Format: <img src="nom_foto.jpg" alt="descripció" class="photo">
+    
+    5. AFEGIR ENLLAÇOS: Busca "ENLLAÇ_AQUÍ" i substitueix per la URL real
+       Format: <a href="https://drive.google.com/..." class="btn-download">
+    
+    6. GUARDAR: File → Save / Guardar (NO canviïs el nom del fitxer)
+    
+    7. VEURE CANVIS: Fes doble clic al fitxer per obrir-lo amb el navegador
+    
+    ═══════════════════════════════════════════════════════════════════════════
+    -->
+    
+    <style>
+        /* ═══════════════════════════════════════
+           COLORS (pots canviar-los aquí)
+           ═══════════════════════════════════════ */
+        :root {
+            --color-rosa: #FF1493;
+            --color-blau: #1976D2;
+            --color-verd: #4CAF50;
+            --color-vermell: #C62828;
+            --color-fons: #f8f9fa;
+        }
+        
+        /* ═══════════════════════════════════════
+           ESTILS GENERALS (NO cal tocar)
+           ═══════════════════════════════════════ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: var(--color-fons);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* CAPÇALERA */
+        header {
+            background: linear-gradient(135deg, #FF69B4 0%, var(--color-rosa) 100%);
+            color: white;
+            padding: 80px 40px;
+            text-align: center;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 20px rgba(255, 20, 147, 0.3);
+        }
+        
+        header h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        header p {
+            font-size: 1.4em;
+            margin: 10px 0;
+        }
+        
+        /* SECCIONS */
+        section {
+            background: white;
+            padding: 50px 40px;
+            margin: 40px 0;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        section h2 {
+            font-size: 2.5em;
+            color: var(--color-blau);
+            margin-bottom: 30px;
+            border-bottom: 4px solid var(--color-blau);
+            padding-bottom: 15px;
+        }
+        
+        section h3 {
+            font-size: 1.8em;
+            color: var(--color-rosa);
+            margin: 30px 0 15px 0;
+        }
+        
+        section h4 {
+            font-size: 1.4em;
+            color: #555;
+            margin: 20px 0 10px 0;
+        }
+        
+        /* CAIXES DESTACADES */
+        .info-box {
+            background: #E3F2FD;
+            border-left: 6px solid var(--color-blau);
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 8px;
+        }
+        
+        .success-box {
+            background: #E8F5E9;
+            border-left: 6px solid var(--color-verd);
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 8px;
+        }
+        
+        .alert-box {
+            background: #FFEBEE;
+            border-left: 6px solid var(--color-vermell);
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 8px;
+        }
+        
+        .collab-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 10px;
+        }
+        
+        /* ESTADÍSTIQUES */
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+        
+        .stat-box {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            min-width: 200px;
+            margin: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .stat-box .number {
+            font-size: 3.5em;
+            color: var(--color-rosa);
+            font-weight: bold;
+        }
+        
+        .stat-box .label {
+            font-size: 1.2em;
+            color: #666;
+            margin-top: 10px;
+        }
+        
+        /* MENÚ NAVEGACIÓ */
+        nav {
+            background: white;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 20px;
+            z-index: 100;
+        }
+        
+        nav h3 {
+            color: var(--color-blau);
+            margin-bottom: 20px;
+        }
+        
+        nav ul {
+            list-style: none;
+        }
+        
+        nav ul li {
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        nav ul li:last-child {
+            border-bottom: none;
+        }
+        
+        nav ul li a {
+            color: var(--color-blau);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: var(--color-rosa);
+        }
+        
+        /* ACTIVITATS */
+        .activity {
+            background: #f8f9fa;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 10px;
+            border-left: 6px solid var(--color-verd);
+        }
+        
+        .activity h4 {
+            color: var(--color-verd);
+            font-size: 1.6em;
+        }
+        
+        /* MATERIALS */
+        .materials {
+            background: #FFF9C4;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .materials h5 {
+            color: #F57C00;
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+        
+        .materials ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .materials li {
+            padding: 8px 0;
+        }
+        
+        /* BOTONS */
+        .btn-download {
+            background: var(--color-verd);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 5px 5px 5px 0;
+            transition: background 0.3s;
+        }
+        
+        .btn-download:hover {
+            background: #45a049;
+        }
+        
+        .btn-nav {
+            background: var(--color-blau);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px 10px 10px 0;
+            font-weight: 500;
+        }
+        
+        .btn-nav:hover {
+            background: #1565C0;
+        }
+        
+        /* FOTOS */
+        .photo-container {
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .photo {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            margin: 10px;
+        }
+        
+        .photo-placeholder {
+            background: #E0E0E0;
+            padding: 60px 20px;
+            border-radius: 10px;
+            text-align: center;
+            color: #666;
+            font-style: italic;
+            margin: 20px 0;
+        }
+        
+        /* LLISTES */
+        ul, ol {
+            margin: 15px 0 15px 30px;
+            line-height: 1.8;
+        }
+        
+        li {
+            margin: 8px 0;
+        }
+        
+        /* GRID */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        
+        .card h4 {
+            color: var(--color-blau);
+            margin-bottom: 15px;
+        }
+        
+        /* FOOTER */
+        footer {
+            background: #333;
+            color: white;
+            padding: 40px;
+            text-align: center;
+            margin-top: 60px;
+            border-radius: 10px;
+        }
+        
+        footer h3 {
+            color: white;
+            margin-bottom: 15px;
+        }
+        
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5em;
+            }
+            
+            section {
+                padding: 30px 20px;
+            }
+            
+            .stats {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     CAPÇALERA PRINCIPAL
+     Pots canviar: Títol, subtítol, institució
+     ═══════════════════════════════════════════════════════════════════ -->
+<header>
+    <h1>💖 ENDOME...QUEEÈ? 💖</h1>
+    <p>Un projecte per desnormalitzar el dolor menstrual</p>
+    <p style="font-size: 1.1em; margin-top: 20px;">Institut Escola Mirades + VHIR (ENDOHIT)</p>
+</header>
+
+<div class="container">
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     INTRODUCCIÓ IMPACTANT
+     Pots canviar: Textos, estadístiques
+     ═══════════════════════════════════════════════════════════════════ -->
+<section id="home">
+    <div class="info-box">
+        <h2 style="color: var(--color-rosa); border: none; margin-bottom: 20px;">🔥 Una de cada deu dones pateix endometriosi</h2>
+        <p style="font-size: 1.2em; line-height: 1.8;">
+            El dolor menstrual intens s'ha normalitzat socialment, retardant el diagnòstic i condemnant 
+            milions de persones a patir en silenci. Aquest projecte té un <strong>doble propòsit</strong>:
+        </p>
+        <ul style="font-size: 1.1em; line-height: 1.8; margin-top: 20px;">
+            <li><strong>🔬 CIENTÍFIC:</strong> Construir coneixement rigorós sobre anatomia, fisiologia i salut reproductiva</li>
+            <li><strong>🌍 SOCIAL:</strong> Desnormalitzar el dolor menstrual i formar una ciutadania capaç de detectar signes d'alerta</li>
+        </ul>
+    </div>
+    
+    <div class="stats">
+        <div class="stat-box">
+            <div class="number">1/10</div>
+            <div class="label">Dones amb endometriosi</div>
+        </div>
+        <div class="stat-box">
+            <div class="number">8</div>
+            <div class="label">Anys retard diagnòstic</div>
+        </div>
+        <div class="stat-box">
+            <div class="number">2n ESO</div>
+            <div class="label">Alumnat protagonista</div>
+        </div>
+    </div>
+    
+    <div style="background: #FFF9C4; padding: 25px; border-radius: 10px; margin: 30px 0;">
+        <p style="font-size: 1.3em; font-style: italic; text-align: center; color: #555;">
+            "L'alumnat assumeix el rol d'equip mèdic per diagnosticar el cas de la Laia, una noia de 16 anys 
+            amb dolor incapacitant que li impedeix fer vida normal."
+        </p>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     MENÚ NAVEGACIÓ
+     Pots canviar: Noms de seccions, afegir/treure apartats
+     ═══════════════════════════════════════════════════════════════════ -->
+<nav>
+    <h3>📚 NAVEGACIÓ DEL PROJECTE</h3>
+    <ul>
+        <li><a href="#fase1">🎬 1. INICI DEL PROJECTE</a></li>
+        <li><a href="#fase2">🔬 2. INDAGACIÓ</a></li>
+        <li><a href="#fase3">⚒️ 3. CREACIÓ DE PRODUCTES</a></li>
+        <li><a href="#fase4">🎨 4. REVISIÓ I MILLORA</a></li>
+        <li><a href="#fase5">🌟 5. EXHIBICIÓ PÚBLICA</a></li>
+        <li><a href="#recursos">📚 RECURSOS I MATERIALS</a></li>
+        <li><a href="#collab">👥 COL·LABORACIONS</a></li>
+    </ul>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     FASE 1: INICI DEL PROJECTE
+     ═══════════════════════════════════════════════════════════════════ -->
+<section id="fase1">
+    <h2>🎬 1. INICI DEL PROJECTE</h2>
+    <p style="font-size: 1.2em; color: #666; margin-bottom: 30px;">Coneixem el cas de la Laia i ens convertim en equip mèdic</p>
+    
+    <div class="success-box">
+        <h3 style="color: var(--color-verd); margin-top: 0;">🎯 Objectius d'aquesta fase:</h3>
+        <ul>
+            <li>Comprendre l'objectiu general del projecte</li>
+            <li>Formular hipòtesis sobre el cas de la Laia</li>
+            <li>Explorar idees prèvies sobre menstruació i dolor</li>
+            <li>Identificar què necessitem aprendre</li>
+        </ul>
+    </div>
+    
+    <div class="activity">
+        <h4>📋 Activitat 1: Exploració inicial - "Per què la Laia té dolor?"</h4>
+        
+        <p><strong>Posada en escena:</strong></p>
+        <p>Els profes arriben a classe amb bates blanques. L'alumnat descobreix que hauran de fer d'equips mèdics per resoldre un cas clínic real.</p>
+        
+        <div style="background: #E3F2FD; padding: 20px; border-radius: 8px; margin: 20px 0; font-style: italic;">
+            <p style="font-size: 1.1em;">
+                "La Laia és una noia de 16 anys. Estudia 4t d'ESO i li agrada l'esport, especialment el bàsquet. 
+                Però la Laia té un problema: cada mes, quan té la menstruació, pateix un dolor tan fort que no pot anar a classe..."
+            </p>
+        </div>
+        
+        <p><strong>Desenvolupament:</strong></p>
+        <ol>
+            <li>Presentem la fitxa de la pacient amb dades mèdiques</li>
+            <li>L'alumnat fa un resum del cas i formula hipòtesis</li>
+            <li>Respon preguntes sobre idees prèvies del cicle menstrual</li>
+            <li>Posada en comú: Què necessitem aprendre?</li>
+        </ol>
+        
+        <div class="materials">
+            <h5>📦 Materials disponibles:</h5>
+            <ul>
+                <!-- ════════ AFEGIR ENLLAÇOS AQUÍ ════════ -->
+                <li><a href="ENLLAÇ_AQUÍ" class="btn-download">📄 Act 1. Exploració inicial.docx</a></li>
+                <li><a href="ENLLAÇ_AQUÍ" class="btn-download">📊 Act 1. Exploració inicial.pptx</a></li>
+                <li><a href="ENLLAÇ_AQUÍ" class="btn-download">🩺 Fitxa pacient Laia</a></li>
+                <!-- ═════════════════════════════════════ -->
+            </ul>
+        </div>
+        
+        <!-- ════════ 📸 AFEGIR FOTO AQUÍ ════════
+             Substitueix el div.photo-placeholder per:
+             <div class="photo-container">
+                 <img src="nom_foto.jpg" alt="Alumnat rebent el cas" class="photo">
+             </div>
+             ═════════════════════════════════════ -->
+        <div class="photo-placeholder">
+            📸 Afegir foto: Alumnat rebent el cas / Treballant amb bates blanques
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     FASE 2: INDAGACIÓ
+     ═══════════════════════════════════════════════════════════════════ -->
+<section id="fase2">
+    <h2>🔬 2. INDAGACIÓ</h2>
+    <p style="font-size: 1.2em; color: #666; margin-bottom: 30px;">Construïm coneixement científic per resoldre el cas</p>
+    
+    <!-- ═════ 2.1. ANATOMIA FEMENÍ ═════ -->
+    <h3>🧬 2.1. Anatomia de l'aparell reproductor femení</h3>
+    
+    <div class="activity">
+        <h4>✍️ Activitat 2: Descobrim l'anatomia</h4>
+        
+        <p><strong>Context:</strong> La Laia té dolor pèlvic, però no sabem quins òrgans hi ha en aquesta zona. Necessitem conèixer l'anatomia per entendre què li pot estar passant.</p>
+        
+        <div class="alert-box">
+            <p><strong>⚠️ Nota important sobre inclusió:</strong> Aquest trimestre treballem des d'un punt de vista biològic. Parlarem d'òrgans i sistemes reproductors, no d'identitats de gènere.</p>
+        </div>
+        
+        <p><strong>Desenvolupament:</strong></p>
+        <ol>
+            <li><strong>Dibuix previ:</strong> Cada alumne/a dibuixa com s'imagina l'aparell reproductor femení</li>
+            <li><strong>Presentació esquema:</strong> Projectem el mapa anatòmic real i comparem</li>
+            <li><strong>Targetes òrgans:</strong> Situar noms d'òrgans en el dibuix</li>
+            <li><strong>Targetes definicions:</strong> Relacionar cada òrgan amb la seva funció</li>
+            <li><strong>Full de treball:</strong> Completar individualment l'activitat</li>
+        </ol>
+        
+        <div class="materials">
+            <h5>📦 Materials disponibles:</h5>
+            <ul>
+                <!-- ════════ AFEGIR ENLLAÇOS AQUÍ ════════ -->
+                <li><a href="ENLLAÇ_AQUÍ" class="btn-download">📄 Act 2. Anatomia aparell femení.docx</a></li>
+                <li><a href="ENLLAÇ_AQUÍ" class="btn-download">🗺️ Mapa anatòmic DINA3.pptx</a></li>
+                <li><a href="ENLLAÇ_AQUÍ" class="btn-download">🏷️ Targetes òrgans i definicions.docx</a></li>
+                <!-- ═════════════════════════════════════ -->
+            </ul>
+        </div>
+        
+        <div class="photo-placeholder">
+            📸 Afegir fotos: Alumnat dibuixant / Treballant amb mapes anatòmics
+        </div>
+    </div>
+    
+    <!-- ═════ 2.2. CICLE MENSTRUAL ═════ -->
+    <h3>🔄 2.2. El cicle menstrual</h3>
+    
+    <div class="activity">
+        <h4>🧩 Activitat 3: Preparació de la xerrada - Puzzle del cicle</h4>
+        
+        <p><strong>Objectiu:</strong> Començar a familiaritzar-se amb el funcionament del cicle menstrual abans de la xerrada de l'experta.</p>
+        
+        <p><strong>Desenvolupament:</strong></p>
+        <ol>
+            <li>El cicle menstrual dura ~28 dies i té 4 fases</li>
+            <li>L'alumnat ordena peces del puzzle sobre hormones, ovari, endometri...</li>
+            <li>Correcció amb graella explicativa</li>
+            <li>Posada en comú dels conceptes clau</li>
+        </ol>
+        
+        <div class="materials">
+            <h5>📦 Materials disponibles:</h5>
+            <ul>
+                <!-- ════════ AFEGIR ENLLAÇOS AQUÍ ════════ -->
+                <li><a href="ENLLAÇ_AQUÍ" class="btn-download">📄 Act 3. Cicle menstrual.pptx</a></li>
+                <li><a href="ENLLAÇ_AQUÍ" class="btn-download">🧩 Material puzzle (taulell + peces).pptx</a></li>
+                <li><a href="ENLLAÇ_AQUÍ" class="btn-download">📋 Graella explicativa cicle.docx</a></li>
+                <!-- ═════════════════════════════════════ -->
+            </ul>
+        </div>
+        
+        <div class="photo-placeholder">
+            📸 Afegir fotos: Alumnat fent el puzzle / Treball en grup
+        </div>
+    </div>
+    
+    <div class="activity">
+        <h4>🎤 Activitat 4: Xerrada experta VHIR - El cicle menstrual</h4>
+        
+        <div class="collab-box">
+            <h3 style="color: white; margin-top: 0;">🏥 Col·laboració VHIR - Projecte ENDOHIT</h3>
+            <p style="font-size: 1.1em;">Experta del Vall d'Hebron Institut de Recerca explica el funcionament del cicle menstrual amb rigor científic.</p>
+        </div>
+        
+        <p><strong>Continguts de la xerrada:</strong></p>
+        <ul>
+            <li>Les 4 fases del cicle menstrual</li>
+            <li>Hormones del cervell (FSH, LH)</li>
+            <li>Hormones de l'ovari (estrògens, progesterona)</li>
+            <li>Fol·licle, ovulació i cos luti</li>
+            <li>Canvis en l'endometri</li>
+        </ul>
+        
+        <div class="materials">
+            <h5>📦 Materials disponibles:</h5>
+            <ul>
+                <!-- ════════ AFEGIR ENLLAÇOS AQUÍ ════════ -->
+                <li><a href="ENLLAÇ_AQUÍ" class="btn-download">📄 Guió xerrada experta.docx</a></li>
+                <li><a href="ENLLAÇ_AQUÍ" class="btn-download">📊 El Cicle Menstrual 25-26.pptx</a></li>
+                <li><a href="ENLLAÇ_AQUÍ" class="btn-download">✍️ Plantilla apunts xerrada.docx</a></li>
+                <!-- ═════════════════════════════════════ -->
+            </ul>
+        </div>
+        
+        <div class="photo-placeholder">
+            📸 Afegir fotos: Xerrada experta VHIR / Alumnat prenent apunts
+        </div>
+    </div>
+    
+    <!-- ═════ 2.3. ANALITZEM EL CAS DE LA LAIA ═════ -->
+    <h3 style="color: var(--color-rosa);">🩺 2.3. Analitzem el cas de la Laia</h3>
+    
+    <div class="success-box">
+        <p style="font-size: 1.1em;"><strong>✨ Ara que ja coneixem l'anatomia i el cicle, és hora d'analitzar les proves mèdiques de la Laia!</strong></p>
+    </div>
+    
+    <div class="activity">
+        <h4>📅 Activitat 7: El calendari menstrual de la Laia</h4>
+        
+        <p><strong>Context:</strong> La Laia porta mesos registrant el seu cicle en un calendari menstrual. Ara l'haurem d'interpretar per detectar patrons.</p>
+        
+        <p><strong>Desenvolupament:</strong></p>
+        <ol>
+            <li>Analitzar el calendari: durada cicle, regularitat, dies de dolor...</li>
+            <li>Identificar patrons anòmals</li>
+            <li>Comparar amb un cicle "normal"</li>
+            <li>Extreure conclusions</li>
+        </ol>
+        
+        <div class="materials">
+            <h5>📦 Materials disponibles:</h5>
+            <ul>
+                <!-- ════════ AFEGIR ENLLAÇOS AQUÍ ════════ -->
+                <li><a href="ENLLAÇ_AQUÍ" class="btn-download">📄 Act 7. Calendari Menstrual Laia (alumnat).docx</a></li>
+                <li><a href="ENLLAÇ_AQUÍ" class="btn-download">✅ Calendari Menstrual Laia (solució).docx</a></li>
+                <!-- ═════════════════════════════════════ -->
+            </ul>
+        </div>
+        
+        <div class="photo-placeholder">
+            📸 Afegir fotos: Alumnat analitzant calendaris
+        </div>
+    </div>
+    
+    <div class="activity">
+        <h4>📊 Activitat 8: Aquest dolor no és normal... Però què és normal?</h4>
+        
+        <div class="alert-box">
+            <p style="font-size: 1.1em;"><strong>💡 Idea clau:</strong> El dolor menstrual lleu és normal. El dolor que t'impedeix fer vida normal NO és normal i cal anar al metge.</p>
+        </div>
+        
+        <p><strong>Desenvolupament:</strong></p>
+        <ol>
+            <li>Reflexió: Què és un dolor "normal"? Com ho mesurem?</li>
+            <li>Presentació de diferents escales de dolor (EVA, escala comparativa...)</li>
+            <li>Debat: Com podem fer una escala objectiva?</li>
+            <li>Introducció al producte final: crearem una escala del dolor</li>
+        </ol>
+        
+        <div class="materials">
+            <h5>📦 Materials disponibles:</h5>
+            <ul>
+                <!-- ════════ AFEGIR ENLLAÇOS AQUÍ ════════ -->
+                <li><a href="ENLLAÇ_AQUÍ" class="btn-download">📄 Act 8. Dolor normal o patològic.docx</a></li>
+                <!-- ═════════════════════════════════════ -->
+            </ul>
+        </div>
+        
+        <div class="photo-placeholder">
+            📸 Afegir fotos: Debat sobre dolor / Escales professionals
+        </div>
+    </div>
+    
+    <div class="activity">
+        <h4>🧪 Activitat 9: Anàlisi hormonal de la Laia</h4>
+        
+        <p><strong>Context:</strong> El metge ha demanat una anàlisi de sang a la Laia per mesurar els seus nivells hormonals.</p>
+        
+        <p><strong>Desenvolupament:</strong></p>
+        <ol>
+            <li>Què és una analítica? Què mesura?</li>
+            <li>L'alumnat rep els resultats de la Laia</li>
+            <li>Compara amb valors normals</li>
+            <li>Interpreta resultats: Quines patologies podem descartar?</li>
+            <li>Conclusions: Les hormones de la Laia són normals</li>
+        </ol>
+        
+        <div class="materials">
+            <h5>📦 Materials disponibles:</h5>
+            <ul>
+                <!-- ════════ AFEGIR ENLLAÇOS AQUÍ ════════ -->
+                <li><a href="ENLLAÇ_AQUÍ" class="btn-download">📄 Act 9. Anàlisi hormonal.docx</a></li>
+                <li><a href="ENLLAÇ_AQUÍ" class="btn-download">📊 Les hormones.pptx</a></li>
+                <!-- ═════════════════════════════════════ -->
+            </ul>
+        </div>
+        
+        <div class="photo-placeholder">
+            📸 Afegir fotos: Alumnat interpretant analítiques
+        </div>
+    </div>
+    
+    <div class="activity">
+        <h4>🔬 Activitat 10: L'ecografia de la Laia</h4>
+        
+        <p><strong>Context:</strong> Com que l'analítica ha sortit normal però el dolor persisteix, el metge demana una ecografia.</p>
+        
+        <div style="background: #E3F2FD; padding: 20px; border-radius: 8px; margin: 20px 0; font-style: italic;">
+            <p>"L'ecografia mostra imatges que el metge interpreta. L'alumnat ha d'aprendre a identificar què veu."</p>
+        </div>
+        
+        <p><strong>Desenvolupament:</strong></p>
+        <ol>
+            <li>Què és una ecografia? Com funciona?</li>
+            <li>Interpretació d'imatges ecogràfiques normals</li>
+            <li>Imatges de l'ecografia de la Laia</li>
+            <li>Identificació d'anomalies: quists als ovaris, teixit endometrial fora de l'úter</li>
+            <li><strong>Conclusió: El diagnòstic més probable és ENDOMETRIOSI</strong></li>
+        </ol>
+        
+        <div class="materials">
+            <h5>📦 Materials disponibles:</h5>
+            <ul>
+                <!-- ════════ AFEGIR ENLLAÇOS AQUÍ ════════ -->
+                <li><a href="ENLLAÇ_AQUÍ" class="btn-download">📄 Act 10. Ecografia de la Laia.docx</a></li>
+                <li><a href="ENLLAÇ_AQUÍ" class="btn-download">📊 Ecografia.pptx</a></li>
+                <!-- ═════════════════════════════════════ -->
+            </ul>
+        </div>
+        
+        <div class="photo-placeholder">
+            📸 Afegir fotos: Alumnat analitzant ecografies / Moment diagnòstic
+        </div>
+    </div>
+    
+    <!-- ═════ 2.4. DESCOBRIM L'ENDOMETRIOSI ═════ -->
+    <h3 style="color: var(--color-vermell);">💡 2.4. Descobrim l'endometriosi</h3>
+    
+    <div class="alert-box">
+        <h4 style="color: var(--color-vermell); margin-top: 0;">🔍 DIAGNÒSTIC CONFIRMAT: ENDOMETRIOSI</h4>
+        <p style="font-size: 1.1em;">Ara que ja sabem què té la Laia, necessitem entendre aquesta malaltia en profunditat.</p>
+    </div>
+    
+    <div class="activity">
+        <h4>🎤 Activitat 11: Xerrada sobre endometriosi (VHIR)</h4>
+        
+        <div class="collab-box">
+            <h3 style="color: white; margin-top: 0;">🏥 Col·laboració VHIR - Projecte ENDOHIT</h3>
+            <p style="font-size: 1.1em;">Experta en endometriosi del VHIR explica les característiques, causes, símptomes, diagnòstic i tractaments de la malaltia.</p>
+        </div>
+        
+        <p><strong>Continguts de la xerrada:</strong></p>
+        <ul>
+            <li>Què és l'endometriosi?</li>
+            <li>Per què es produeix? (Causes)</li>
+            <li>Quins símptomes té?</li>
+            <li>Prevalença: 1 de cada 10 dones</li>
+            <li>Dificultats diagnòstiques: 8 anys de mitjana</li>
+            <li>Tractaments disponibles</li>
+            <li>Impacte en la qualitat de vida</li>
+            <li>Importància de desnormalitzar el dolor</li>
+        </ul>
+        
+        <div class="materials">
+            <h5>📦 Materials disponibles:</h5>
+            <ul>
+                <!-- ════════ AFEGIR ENLLAÇOS AQUÍ ════════ -->
+                <li><a href="ENLLAÇ_AQUÍ" class="btn-download">📄 Guió xerrada ENDO-HIT.docx</a></li>
+                <li><a href="ENLLAÇ_AQUÍ" class="btn-download">📊 Presentació xerrada ENDO-HIT.pdf</a></li>
+                <li><a href="ENLLAÇ_AQUÍ" class="btn-download">✍️ Plantilla apunts endometriosi.docx</a></li>
+                <!-- ═════════════════════════════════════ -->
+            </ul>
+        </div>
+        
+        <div class="photo-placeholder">
+            📸 Afegir fotos: Xerrada experta VHIR / Alumnat atent / Preguntes i respostes
+        </div>
+    </div>
+    
+    <div class="activity">
+        <h4>💡 Activitat 13: Idees clau sobre endometriosi</h4>
+        
+        <p><strong>Idees clau a treballar:</strong></p>
+        <ul>
+            <li>Definició d'endometriosi</li>
+            <li>Teixit endometrial creix fora de l'úter</li>
+            <li>Símptomes: dolor intens, problemes fertilitat</li>
+            <li>Prevalença i dificultats diagnòstiques</li>
+            <li>Importància de no normalitzar el dolor</li>
+        </ul>
+        
+        <div class="materials">
+            <h5>📦 Materials disponibles:</h5>
+            <ul>
+                <!-- ════════ AFEGIR ENLLAÇOS AQUÍ ════════ -->
+                <li><a href="ENLLAÇ_AQUÍ" class="btn-download">📄 Act 13. Idees clau endometriosi.docx</a></li>
+                <!-- ═════════════════════════════════════ -->
+            </ul>
+        </div>
+    </div>
+    
+    <!-- ═════ 2.5. EL CAS DE L'ALBERT ═════ -->
+    <h3>👨 2.5. El cas de l'Albert - Aparell reproductor masculí</h3>
+    
+    <div class="info-box">
+        <h4 style="color: var(--color-blau); margin-top: 0;">🆕 Nou cas clínic!</h4>
+        <p style="font-size: 1.1em;">Ara que ja coneixem l'aparell reproductor femení i hem resolt el cas de la Laia, rebem un nou cas: l'Albert, un noi de 17 anys amb uretritis.</p>
+    </div>
+    
+    <div class="activity">
+        <h4>📋 Activitat 14: El cas de l'Albert - Exploració inicial</h4>
+        
+        <p><strong>Context:</strong> L'Albert és un noi de 17 anys que té molèsties en urinar i secreció uretral. Necessitem conèixer l'anatomia de l'aparell reproductor masculí per ajudar-lo.</p>
+        
+        <p><strong>Desenvolupament:</strong></p>
+        <ol>
+            <li>Dibuix previ: Com s'imaginen l'aparell reproductor masculí</li>
+            <li>Presentació del cas de l'Albert</li>
+            <li>Formulació d'hipòtesis</li>
+            <li>Identificació: què necessitem aprendre?</li>
+        </ol>
+        
+        <div class="materials">
+            <h5>📦 Materials disponibles:</h5>
+            <ul>
+                <!-- ════════ AFEGIR ENLLAÇOS AQUÍ ════════ -->
+                <li><a href="ENLLAÇ_AQUÍ" class="btn-download">📊 Act 14. El cas de l'Albert.pptx</a></li>
+                <li><a href="ENLLAÇ_AQUÍ" class="btn-download">📄 Full de treball anatomia.docx</a></li>
+                <li><a href="ENLLAÇ_AQUÍ" class="btn-download">✅ SOLUCIO Full de treball anatomia.docx</a></li>
+                <!-- ═════════════════════════════════════ -->
+            </ul>
+        </div>
+        
+        <div class="photo-placeholder">
+            📸 Afegir fotos: Alumnat dibuixant aparell masculí / Treballant en grup
+        </div>
+    </div>
+    
+    <div class="activity">
+        <h4>🎤 Activitat 15: Xerrada aparell reproductor masculí</h4>
+        
+        <p><strong>Continguts:</strong></p>
+        <ul>
+            <li>Testicles i producció d'espermatozoides</li>
+            <li>Epidídim i conductes deferents</li>
+            <li>Vesícules seminals i pròstata</li>
+            <li>Penis i uretra</li>
+            <li>Producció de semen</li>
+            <li>Salut reproductiva masculina</li>
+        </ul>
+        
+        <div class="materials">
+            <h5>📦 Materials disponibles:</h5>
+            <ul>
+                <!-- ════════ AFEGIR ENLLAÇOS AQUÍ ════════ -->
+                <li><a href="ENLLAÇ_AQUÍ" class="btn-download">📊 Aparell reproductor masculí.pptx</a></li>
+                <li><a href="ENLLAÇ_AQUÍ" class="btn-download">📄 Guió aparell reproductor masculí.docx</a></li>
+                <li><a href="ENLLAÇ_AQUÍ" class="btn-download">✍️ Plantilla apunts masculí.docx</a></li>
+                <!-- ═════════════════════════════════════ -->
+            </ul>
+        </div>
+        
+        <div class="photo-placeholder">
+            📸 Afegir fotos: Xerrada expert / Alumnat prenent apunts
+        </div>
+    </div>
+    
+    <div class="activity">
+        <h4>💡 Activitat 16: El cas de l'Albert - Conclusions</h4>
+        
+        <p><strong>Conclusions:</strong></p>
+        <ul>
+            <li>Anàlisi símptomes Albert: molèsties uretra, secreció</li>
+            <li>Diagnòstic: Uretritis (infecció uretra)</li>
+            <li>Tractament i prevenció</li>
+            <li>Importància higiene i salut sexual</li>
+        </ul>
+        
+        <div class="materials">
+            <h5>📦 Materials disponibles:</h5>
+            <ul>
+                <!-- ════════ AFEGIR ENLLAÇOS AQUÍ ════════ -->
+                <li><a href="ENLLAÇ_AQUÍ" class="btn-download">📊 Act 16. Conclusions cas Albert.pptx</a></li>
+                <!-- ═════════════════════════════════════ -->
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     FASE 3: CREACIÓ DE PRODUCTES FINALS
+     ═══════════════════════════════════════════════════════════════════ -->
+<section id="fase3">
+    <h2>⚒️ 3. CREACIÓ DE PRODUCTES FINALS</h2>
+    <p style="font-size: 1.2em; color: #666; margin-bottom: 30px;">Posem el coneixement al servei de la societat</p>
+    
+    <div class="success-box">
+        <h3 style="color: var(--color-verd); margin-top: 0;">🎯 L'encàrrec de la recerca (VHIR):</h3>
+        <p style="font-size: 1.1em;">Els investigadors del VHIR ens demanen ajuda! Necessiten que creem materials per:</p>
+        <ul>
+            <li>Mesurar el dolor menstrual de manera objectiva</li>
+            <li>Divulgar informació sobre l'endometriosi</li>
+            <li>Fer tallers a altres instituts</li>
+            <li>Sensibilitzar sobre la importància de no normalitzar el dolor</li>
+        </ul>
+    </div>
+    
+    <div class="grid">
+        <div class="card">
+            <h4>📊 Producte 1: Escala del dolor</h4>
+            <p>Crear una escala objectiva per mesurar el dolor menstrual basada en criteris científics.</p>
+            <ul>
+                <li>Anàlisi escales professionals</li>
+                <li>Adaptació a adolescents</li>
+                <li>Validació amb expertes</li>
+            </ul>
+        </div>
+        
+        <div class="card">
+            <h4>🎮 Producte 2: Pasaparaula</h4>
+            <p>Joc educatiu amb 27 paraules clau del projecte per repassar conceptes.</p>
+            <ul>
+                <li>Anatomia femení i masculí</li>
+                <li>Cicle menstrual</li>
+                <li>Endometriosi</li>
+            </ul>
+        </div>
+        
+        <div class="card">
+            <h4>🎨 Producte 3: Arxiu artístic</h4>
+            <p>Col·lecció d'obres d'art que representen la menstruació i l'endometriosi.</p>
+            <ul>
+                <li>Frida Kahlo</li>
+                <li>Rupi Kaur</li>
+                <li>Judy Chicago</li>
+            </ul>
+        </div>
+        
+        <div class="card">
+            <h4>🎤 Producte 4: Tallers</h4>
+            <p>Xerrades i tallers per portar a altres instituts i sensibilitzar sobre l'endometriosi.</p>
+            <ul>
+                <li>Presentacions</li>
+                <li>Activitats interactives</li>
+                <li>Materials divulgatius</li>
+            </ul>
+        </div>
+    </div>
+    
+    <h3 style="color: var(--color-rosa); margin-top: 50px;">📊 L'Escala del Dolor - Procés de creació</h3>
+    
+    <div class="activity">
+        <h4>🔬 Creació de l'escala del dolor objectiva</h4>
+        
+        <p><strong>Procés:</strong></p>
+        <ol>
+            <li><strong>Anàlisi escales professionals:</strong> Estudiar escales existents (EVA, Escala IE Mirades...)</li>
+            <li><strong>Identificar criteris objectius:</strong> Què pot i què no pot fer una persona segons el nivell de dolor?</li>
+            <li><strong>Crear entrevista:</strong> Arbre de decisions amb preguntes dicotòmiques</li>
+            <li><strong>Validar:</strong> Provar amb companyes i expertes VHIR</li>
+            <li><strong>Producte final:</strong> 3 versions de l'escala (simplificada, visual, test interactiu)</li>
+        </ol>
+        
+        <div class="materials">
+            <h5>📦 Materials creats per l'alumnat:</h5>
+            <ul>
+                <!-- ════════ AFEGIR ENLLAÇOS AQUÍ ════════ -->
+                <li><a href="ENLLAÇ_AQUÍ" class="btn-download">📄 Escala dolor objectiva FINAL.docx</a></li>
+                <li><a href="ENLLAÇ_AQUÍ" class="btn-download">🎮 PASAPARAULA Projecte Endometriosi.docx</a></li>
+                <!-- ═════════════════════════════════════ -->
+            </ul>
+        </div>
+        
+        <div class="photo-placeholder">
+            📸 Afegir fotos: Procés creació / Instal·lació artística escala / Alumnat testejant
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     FASE 4: REVISIÓ I MILLORA
+     ═══════════════════════════════════════════════════════════════════ -->
+<section id="fase4">
+    <h2>🎨 4. REVISIÓ I MILLORA</h2>
+    <p style="font-size: 1.2em; color: #666; margin-bottom: 30px;">Avaluem i perfeccionem els nostres productes</p>
+    
+    <div class="activity">
+        <h4>🔄 Processos de revisió</h4>
+        
+        <p><strong>Estratègies de millora:</strong></p>
+        <ul>
+            <li><strong>Feedback entre iguals:</strong> Cada grup presenta el seu producte i rep retroalimentació</li>
+            <li><strong>Protocol d'afinament:</strong> Preguntes estructurades per millorar els productes</li>
+            <li><strong>Validació expertes:</strong> Les investigadores del VHIR revisen els materials</li>
+            <li><strong>Testeig amb companys:</strong> Provar l'escala i el Pasaparaula amb altres classes</li>
+        </ul>
+        
+        <div style="background: #E3F2FD; padding: 20px; border-radius: 8px; margin: 20px 0; font-style: italic;">
+            <p style="font-size: 1.1em;">"El feedback no és una crítica, és una oportunitat per fer els nostres productes encara millors."</p>
+        </div>
+    </div>
+    
+    <div class="activity">
+        <h4>🧠 Metacognició contínua</h4>
+        
+        <p><strong>Sessions "Com anem fins ara?":</strong></p>
+        <p>Al llarg del projecte, l'alumnat ha reflexionat diverses vegades sobre el seu aprenentatge:</p>
+        
+        <ul>
+            <li>Després d'aprendre anatomia i cicle menstrual</li>
+            <li>Després del cas de la Laia i diagnòstic endometriosi</li>
+            <li>Després del cas de l'Albert i aparell masculí</li>
+            <li>Durant la creació dels productes finals</li>
+        </ul>
+        
+        <div class="success-box">
+            <h4 style="color: var(--color-verd); margin-top: 0;">💡 Preguntes guia metacognició:</h4>
+            <ul>
+                <li>Què he après que no sabia abans?</li>
+                <li>Què m'ha sorprès més?</li>
+                <li>Què encara em costa entendre?</li>
+                <li>Com ha canviat la meva visió del dolor menstrual?</li>
+                <li>Què m'ha aportat aquest projecte?</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     FASE 5: EXHIBICIÓ PÚBLICA
+     ═══════════════════════════════════════════════════════════════════ -->
+<section id="fase5">
+    <h2>🌟 5. EXHIBICIÓ PÚBLICA</h2>
+    <p style="font-size: 1.2em; color: #666; margin-bottom: 30px;">Compartim el coneixement i generem impacte social</p>
+    
+    <div class="success-box">
+        <h3 style="color: var(--color-verd); margin-top: 0;">🎯 Transferència de coneixement:</h3>
+        <p style="font-size: 1.1em;">L'alumnat no només aprèn sobre endometriosi, sinó que es converteix en agent de canvi portant el missatge a altres instituts i comunitats.</p>
+    </div>
+    
+    <div class="activity">
+        <h4>🎤 Tallers a altres instituts</h4>
+        
+        <p><strong>Format dels tallers:</strong></p>
+        <ol>
+            <li><strong>Introducció:</strong> Presentació del projecte i objectius</li>
+            <li><strong>Cas de la Laia:</strong> Explicació del cas clínic</li>
+            <li><strong>Anatomia i cicle:</strong> Conceptes bàsics</li>
+            <li><strong>Endometriosi:</strong> Què és i per què cal desnormalitzar el dolor</li>
+            <li><strong>Escala del dolor:</strong> Activitat interactiva amb l'escala creada</li>
+            <li><strong>Pasaparaula:</strong> Joc per consolidar conceptes</li>
+            <li><strong>Reflexió final:</strong> Debat sobre normalització del dolor</li>
+        </ol>
+        
+        <div class="photo-placeholder">
+            📸 Afegir fotos: Tallers a altres instituts / Alumnat explicant / Activitats interactives
+        </div>
+    </div>
+    
+    <div class="activity">
+        <h4>📣 Difusió i impacte</h4>
+        
+        <div class="grid">
+            <div class="card">
+                <h4>📱 Xarxes socials escola</h4>
+                <ul>
+                    <li>Instagram: publicacions sobre el projecte</li>
+                    <li>Twitter: difusió #Desnormalitzem</li>
+                    <li>Web escola: article explicatiu</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h4>📰 Mitjans de comunicació</h4>
+                <ul>
+                    <li>Premsa local: article sobre el projecte</li>
+                    <li>Ràdio: entrevista alumnat</li>
+                    <li>Blog VHIR: col·laboració escola-recerca</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h4>🎓 Àmbit acadèmic</h4>
+                <ul>
+                    <li>Congrés UPC Professorat STEM</li>
+                    <li>Jornades ABP</li>
+                    <li>Repositori materials educatius</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h4>📊 Impacte mesurable</h4>
+                <ul>
+                    <li>Nº instituts on s'ha transferit</li>
+                    <li>Nº alumnat sensibilitzat</li>
+                    <li>Materials descarregats</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div style="background: #C8E6C9; border-left: 6px solid var(--color-verd); padding: 25px; border-radius: 8px; margin: 40px 0;">
+        <p style="font-size: 1.4em; color: #1B5E20; margin: 0; text-align: center;">
+            <strong>"El dolor menstrual intens mai no és normal. Si et passa, no ho normalitzis. Ves al metge."</strong>
+        </p>
+        <p style="margin-top: 15px; font-style: italic; color: #2E7D32; text-align: center;">
+            — Missatge clau del projecte
+        </p>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     RECURSOS I MATERIALS
+     ═══════════════════════════════════════════════════════════════════ -->
+<section id="recursos">
+    <h2>📚 RECURSOS I MATERIALS</h2>
+    <p style="font-size: 1.2em; color: #666; margin-bottom: 30px;">Tots els materials del projecte disponibles per descarregar</p>
+    
+    <div class="grid">
+        <div class="card">
+            <h4>📋 Documents de programació</h4>
+            <ul>
+                <!-- ════════ AFEGIR ENLLAÇOS AQUÍ ════════ -->
+                <li><a href="ENLLAÇ_AQUÍ" class="btn-download">📄 DdP complet.docx</a></li>
+                <li><a href="ENLLAÇ_AQUÍ" class="btn-download">🔗 Enllaç carpeta Drive completa</a></li>
+                <li><a href="ENLLAÇ_AQUÍ" class="btn-download">📄 Guia didàctica.pdf</a></li>
+                <!-- ═════════════════════════════════════ -->
+            </ul>
+        </div>
+        
+        <div class="card">
+            <h4>📝 Fitxes alumnat (Inici i Laia)</h4>
+            <ul>
+                <!-- ════════ AFEGIR ENLLAÇOS AQUÍ ════════ -->
+                <li><a href="ENLLAÇ_AQUÍ" class="btn-download">Act 1: Exploració inicial</a></li>
+                <li><a href="ENLLAÇ_AQUÍ" class="btn-download">Act 2: Anatomia femení</a></li>
+                <li><a href="ENLLAÇ_AQUÍ" class="btn-download">Act 3-4: Cicle menstrual</a></li>
+                <li><a href="ENLLAÇ_AQUÍ" class="btn-download">Act 7-10: Proves Laia</a></li>
+                <li><a href="ENLLAÇ_AQUÍ" class="btn-download">Act 11-13: Endometriosi</a></li>
+                <!-- ═════════════════════════════════════ -->
+            </ul>
+        </div>
+        
+        <div class="card">
+            <h4>📝 Fitxes alumnat (Albert)</h4>
+            <ul>
+                <!-- ════════ AFEGIR ENLLAÇOS AQUÍ ════════ -->
+                <li><a href="ENLLAÇ_AQUÍ" class="btn-download">Act 14: Cas Albert</a></li>
+                <li><a href="ENLLAÇ_AQUÍ" class="btn-download">Act 15: Xerrada masculí</a></li>
+                <li><a href="ENLLAÇ_AQUÍ" class="btn-download">Act 16: Conclusions</a></li>
+                <!-- ═════════════════════════════════════ -->
+            </ul>
+        </div>
+        
+        <div class="card">
+            <h4>📊 Productes finals alumnat</h4>
+            <ul>
+                <!-- ════════ AFEGIR ENLLAÇOS AQUÍ ════════ -->
+                <li><a href="ENLLAÇ_AQUÍ" class="btn-download">📄 Escala dolor (3 versions)</a></li>
+                <li><a href="ENLLAÇ_AQUÍ" class="btn-download">🎮 Pasaparaula.docx</a></li>
+                <li><a href="ENLLAÇ_AQUÍ" class="btn-download">🎨 Arxiu artístic</a></li>
+                <!-- ═════════════════════════════════════ -->
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     COL·LABORACIONS
+     ═══════════════════════════════════════════════════════════════════ -->
+<section id="collab">
+    <h2>👥 COL·LABORACIONS I AGRAÏMENTS</h2>
+    <p style="font-size: 1.2em; color: #666; margin-bottom: 30px;">Aquest projecte no seria possible sense...</p>
+    
+    <div class="collab-box">
+        <h3 style="color: white; margin-top: 0;">🏥 VHIR - Vall d'Hebron Institut de Recerca</h3>
+        <h4 style="color: white;">Projecte ENDOHIT</h4>
+        <p style="font-size: 1.1em; line-height: 1.8;">
+            Col·laboració essencial amb l'equip d'investigadores del Vall d'Hebron Institut de Recerca 
+            en el marc del projecte ENDOHIT. Les expertes han aportat rigor científic, han fet xerrades 
+            a l'aula i han validat els materials creats per l'alumnat.
+        </p>
+        <!-- ════════ AFEGIR NOMS EXPERTES AQUÍ ════════ -->
+        <p style="margin-top: 15px;"><strong>Expertes participants:</strong></p>
+        <ul>
+            <li>Dra. [Nom experta cicle menstrual]</li>
+            <li>Dra. [Nom experta endometriosi]</li>
+            <li>Equip recerca ENDOHIT</li>
+        </ul>
+        <!-- ═════════════════════════════════════════ -->
+        <p style="margin-top: 20px;">
+            🔗 <a href="https://www.vhir.org" target="_blank" style="color: white; text-decoration: underline;">Més informació sobre VHIR</a>
+        </p>
+    </div>
+    
+    <div class="grid" style="margin-top: 40px;">
+        <div class="card">
+            <h4>🏫 Institut Escola Mirades</h4>
+            <!-- ════════ AFEGIR NOMS PROFES AQUÍ ════════ -->
+            <p><strong>Equip docent:</strong></p>
+            <ul>
+                <li>Jordi [Cognom] - Coordinació i disseny projecte</li>
+                <li>Professorat de ciències</li>
+                <li>Tutors/es 2n ESO</li>
+            </ul>
+            <!-- ═════════════════════════════════════════ -->
+            <p style="margin-top: 15px;"><strong>Alumnat 2n ESO curs 2025-2026</strong></p>
+            <p>Protagonistes absoluts del projecte. Han investigat, creat materials i sensibilitzat altres instituts sobre l'endometriosi.</p>
+        </div>
+        
+        <div class="card">
+            <h4>🎓 Universitat Autònoma de Barcelona</h4>
+            <p><strong>Màster DEIA/Recerca-Acció</strong></p>
+            <p>Formació en didàctica de les ciències experimentals que ha permès dissenyar aquest projecte amb rigor pedagògic.</p>
+            <br>
+            <h4>🙏 Agraïments especials:</h4>
+            <ul>
+                <li>Famílies alumnat</li>
+                <li>Instituts que han rebut els tallers</li>
+                <li>Comunitat educativa Institut Mirades</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="success-box" style="margin-top: 40px;">
+        <h3 style="color: var(--color-verd); margin-top: 0;">📧 Contacte</h3>
+        <!-- ════════ AFEGIR DADES CONTACTE AQUÍ ════════ -->
+        <p>Si estàs interessat/da en implementar aquest projecte al teu centre o vols més informació:</p>
+        <ul>
+            <li><strong>Email:</strong> [correu institut]</li>
+            <li><strong>Web:</strong> [web institut mirades]</li>
+            <li><strong>Twitter/X:</strong> @[compte_institut]</li>
+        </ul>
+        <!-- ═════════════════════════════════════════════ -->
+    </div>
+</section>
+
+</div> <!-- Tanca container -->
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     FOOTER
+     ═══════════════════════════════════════════════════════════════════ -->
+<footer>
+    <h3>💖 ENDOME...QUEEÈ? 💖</h3>
+    <p>Projecte d'Aprenentatge Basat en Problemes - 2n ESO</p>
+    <p>Institut Escola Mirades + VHIR (ENDOHIT)</p>
+    <p style="margin-top: 20px; font-size: 1.3em;">
+        <strong>"El dolor menstrual intens mai no és normal"</strong>
+    </p>
+    <p style="margin-top: 30px; font-size: 0.9em; color: #999;">
+        Curs 2025-2026 | Barcelona
+    </p>
+</footer>
+
+</body>
+</html>
